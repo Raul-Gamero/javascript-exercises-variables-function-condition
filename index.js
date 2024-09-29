@@ -1,82 +1,96 @@
-// VARIABLES
-// Crea una variable llamada "name" que contenga un string
+//Variables
 
-// Crea una variable llamada "age" que contenga un integer
+// Create a variable called "name" that contains a string.
+let name = "John";
 
-// Crea una variable llamada "hasHobbies" que contenga un booleano
+// Create a variable called "age" that contains an integer.
+let age = 25;
 
-// Crea una variable llamada "empty" que sea undefined
+// Create a variable called "hasHobbies" that contains a boolean.
+let hasHobbies = true;
 
-// Crea una variable llamada "undefinedVariable" que sea undefined sin usar la palabra undefined
+// Create a variable called "empty" that is undefined.
+let empty;
 
-// Crea una variable llamada "nullVariable" que sea null
+// Create a variable called "undefinedVariable" that is undefined without using the word undefined.
+let undefinedVariable = null;
 
-// FUNCIONES
-// Crea una función llamada "sayHello" que retorne "Hello"
+// Create a variable called "nullVariable" that is null.
+let nullVariable = null;
 
-// Crea una función llamada "add" que reciba dos números como argumentos y retorne la suma de ambos
+// Functions
 
-
-// Crea una función llamada "sayHelloTo" que reciba un nombre como argumento y retorne "Hello, {name}"
-
-// CONDICIONALES
-// Crea una condición que retorne "true" si "firstParam" es mayor a "secondParam" y "false" si no lo es
-
-function isGreater(firstParam, secondParam) {
-  // Aquí va tu código
+// Create a function called "sayHello" that returns "Hello".
+function sayHello() {
+  return "Hello";
 }
 
-// Crea una condición que retorne "true" si "firstParam" es igual a "secondParam" y "false" si no lo es
-
-function isEqual(firstParam, secondParam) {
-  // Aquí va tu código
+// Create a function called "add" that receives two numbers as arguments and returns their sum.
+function add(num1, num2) {
+  return num1 + num2;
 }
 
-// Crea una condición que retorne "true" si "firstParam" es diferente a "secondParam" y "false" si no lo es
-
-function isDifferent(firstParam, secondParam) {
-  // Aquí va tu código
+// Create a function called "sayHelloTo" that receives a name as an argument and returns "Hello, {name}".
+function sayHelloTo(personName) {
+  return `Hello, ${personName}`;
 }
 
-// Crear una función llamada "isEven" que reciba un número como argumento y retorne "true" si es par o "false" si es impar
+// Conditional Statements
 
+// Create a condition that returns "true" if "firstParam" is greater than "secondParam" and "false" if not.
+function compareGreater(firstParam, secondParam) {
+  return firstParam > secondParam;
+}
+
+// Create a condition that returns "true" if "firstParam" is equal to "secondParam" and "false" if not.
+
+function compareEqual(firstParam, secondParam)  {
+  return firstParam === secondParam;
+}
+
+// Create a condition that returns "true" if "firstParam" is different from "secondParam" and "false" if not.
+function compareDifferent(firstParam, secondParam) {
+  return firstParam !== secondParam;
+}
+
+// Create a function called "isEven" that receives a number and returns "true" if even, or "false" if odd.
 function isEven(number) {
-  // Aquí va tu código
+  return number % 2 === 0;
 }
-
-// Crear una función llamada "isOdd" que reciba un número como argumento y retorne "true" si es impar o "false" si es par
 
 function isOdd(number) {
-  // Aquí va tu código
+  return number % 2 !== 0;
 }
-
-// Crear una función llamada "isPositive" que reciba un número como argumento y retorne "true" si es positivo o "false" si es negativo
 
 function isPositive(number) {
-  // Aquí va tu código
+  return number > 0;
 }
 
-// Crea una condición que retorne "true" si "firstParam" es mayor a "secondParam" o "thirdParam" es mayor a "fourthParam" y "false" si no lo es
-
-function isGreaterOr(firstParam, secondParam, thirdParam, fourthParam) {
-  // Aquí va tu código
+// Create a condition that returns "true" if "firstParam" is greater than "secondParam" or "thirdParam" is greater than "fourthParam".
+function compareOr(firstParam, secondParam, thirdParam, fourthParam) {
+  return firstParam > secondParam || thirdParam > fourthParam;
 }
 
-// Crea una condición que retorne "true" si "firstParam" es mayor a "secondParam" y "thirdParam" es mayor a "fourthParam" y "false" si no lo es
-
-function isGreaterAnd(firstParam, secondParam, thirdParam, fourthParam) {
-  // Aquí va tu código
+// Create a condition that returns "true" if "firstParam" is greater than "secondParam" and "thirdParam" is greater than "fourthParam".
+function compareAnd(firstParam, secondParam, thirdParam, fourthParam) {
+  return firstParam > secondParam && thirdParam > fourthParam;
 }
 
-// Crea una función llamada "getRoleByName" que reciba un nombre como argumento
-// el nombre puede ser Giorgio, Ivan o Marcos y debe retornar el rol de la persona
-// Giorgio -> LI
-// Ivan -> LI
-// Marcos -> TA
-// Si no es ninguna de esas personas debe retornar "Not found"
-
-// Esta parte se puede hacer con if/else o con switch/case
-
-function getRoleByName(name) {
-  // Aquí va tu código
+// Create a function called "getAgeByName" that receives a name and returns the role based on specific conditions.
+function getAgeByName(personName) {
+  if (personName === "Giorgio" || personName === "Ivan") {
+    return "LI";
+  } else if (personName === "Marcos") {
+    return "TA";
+  } else {
+    return "Not found";
+  }
 }
+
+// Example Usage
+console.log(sayHello()); // Output: Hello
+console.log(add(5, 10)); // Output: 15
+console.log(sayHelloTo(name)); // Output: Hello, John
+console.log(compareGreater(10, 5)); // Output: true
+console.log(isEven(4)); // Output: true
+console.log(getAgeByName("Giorgio")); // Output: LI
